@@ -1,0 +1,102 @@
+.header{
+    position: fixed;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    z-index: 100;
+    font-family: 'roman',serif;
+}
+.gnb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobile{
+        display: none;
+    }
+    .gnb-area{
+        max-width: 1024px;
+        height: auto;
+    }
+    .nav-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 19px;
+        background-color: hsla(0,0%,78.4%,.35);
+        backdrop-filter: blur(10px);
+    }
+    .nav-item{}
+    .nav{
+        display: block;
+        padding: 11px;
+        border-radius: 16px;
+        font-size: 19px;
+        &:hover{
+            background-color: hsla(0,0%,78.4%,.35);
+            backdrop-filter: blur(15px);
+        }
+    }
+}
+.m-gnb{
+    display: none;
+    @include mobile{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        display: block;
+        padding: 0 12px;
+    }
+    .wrap{
+        border-radius: 19px;
+        background-color: hsla(0,0%,78.4%,.35);
+        backdrop-filter: blur(10px);
+    }
+    .m-area{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 24px;
+        padding: 5px;
+        .mo-nav{
+            display: block;
+            font-size: 21px;
+            padding: 11px 6px;
+            &.btn-menu{
+                display: block;
+                &.on{
+                    display: none;
+                }
+            }
+            &.btn-close{
+                display: none;
+                &.on{
+                    display: block;
+                }
+            }
+        }
+    }
+    .m-list{
+        display: none;
+        z-index: 1;
+        width: 100%;
+        padding: 16px 0;
+        &.on{
+            display: block;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+    .m-item{
+        width: 100%;
+    }
+    .nav{
+        display: block;
+        width: 100%;
+        color: #101010;
+        font-size: 48px;
+        text-align: center;
+        padding: 16px 0;
+    }
+}
